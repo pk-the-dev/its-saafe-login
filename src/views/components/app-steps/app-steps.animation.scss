@@ -1,0 +1,158 @@
+.steps-container {
+  color: #fff;
+  margin-block-start: 16px;
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    margin-block: 80px;
+
+    .circle {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      background-color: #fff;
+      @include flex-centered(column, 0);
+
+      .ant-image {
+        height: 24px !important;
+        width: 24px !important;
+      }
+    }
+
+    .step-content {
+      width: calc(100% - 56px);
+    }
+  }
+}
+
+/* Add this for the vertical dashed line */
+.step::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  border-left: 2px dashed #d0f0f0;
+  height: calc(100% + 80px);
+  left: 19px;
+  top: 28px;
+  z-index: -1;
+}
+
+.step:last-child::before {
+  display: none; /* No line after the last step */
+}
+
+// Animation
+.steps-container {
+  animation: fadeInStep 12s linear infinite;
+}
+
+.step {
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: wipeFromTop 12s ease-in-out infinite;
+
+  &:nth-child(1) {
+    animation: wipeFromTopStep1 12s ease-in-out infinite;
+  }
+
+  &:nth-child(2) {
+    animation: wipeFromTopStep2 12s ease-in-out infinite;
+  }
+
+  &:nth-child(3) {
+    animation: wipeFromTopStep3 12s ease-in-out infinite;
+  }
+}
+
+.step {
+  &:nth-child(1)::before {
+    height: 0;
+    animation: growLineStep1 12s ease-in-out infinite;
+    animation-delay: 750ms;
+  }
+  &:nth-child(2)::before {
+    height: 0;
+    animation: growLineStep2 12s ease-in-out infinite;
+    animation-delay: 750ms;
+  }
+}
+
+/* Keyframes */
+@keyframes wipeFromTopStep1 {
+  0%,
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25%,
+  98% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wipeFromTopStep2 {
+  0%,
+  25%,
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50%,
+  98% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wipeFromTopStep3 {
+  0%,
+  25%,
+  50%,
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  75%,
+  98% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes growLineStep1 {
+  0%,
+  5%,
+  100% {
+    height: 0;
+  }
+  50%,
+  98% {
+    height: calc(100% + 80px);
+  }
+}
+
+@keyframes growLineStep2 {
+  0%,
+  30%,
+  100% {
+    height: 0;
+  }
+  75%,
+  98% {
+    height: calc(100% + 80px);
+  }
+}
+
+@keyframes fadeInStep {
+  0%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

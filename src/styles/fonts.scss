@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Poppins';
+  src:
+    local('Poppins'),
+    url('./../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+:root {
+  @include font-sizes(); // Generates font-xl, font-l, etc.
+  @include font-weights(); // Generates font-weight-light, font--weight-regular, etc.
+}

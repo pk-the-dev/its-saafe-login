@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@views/*": ["./src/views/*"],
+      "@pages/*": ["./src/views/pages/*"],
+      "@comps/*": ["./src/views/components/*"],
+      "@service/*": ["./src/service/*"],
+      "@routes": ["./src/routes/routes.library.js"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@context/*": ["./src/context-api/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

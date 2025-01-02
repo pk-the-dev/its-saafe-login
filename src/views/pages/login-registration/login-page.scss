@@ -1,0 +1,57 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.mesh-container {
+  @include flex-centered(column, 0);
+
+  height: 100%;
+  width: 50%;
+}
+
+.right-pane {
+  height: 100%;
+  flex-grow: 1;
+
+  .right-pane-container {
+    @include flex-centered(column, 16px);
+
+    max-width: 60%;
+  }
+}
+
+.language-selector {
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
+/* Styles for screens smaller than 760px OR between 761px and 1023px */
+@media (max-width: 759px),
+  (min-width: 761px) and (max-width: 1023px) and (orientation: portrait) {
+  .main-container {
+    flex-direction: column;
+  }
+  .mesh-container {
+    height: 65%;
+    width: 100%;
+  }
+  .right-pane {
+    width: 100%;
+  }
+  .logo {
+    display: none;
+  }
+  .language-selector {
+    position: absolute;
+    .down-icon {
+      color: white;
+    }
+    .ant-select-selection-item {
+      color: white !important;
+    }
+  }
+}

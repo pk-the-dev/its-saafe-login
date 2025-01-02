@@ -1,0 +1,33 @@
+.loader-container {
+  @include flex-centered();
+
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 9999;
+  background: var(--black-overlay-7);
+
+  .loader {
+    width: scale(10);
+    height: scale(10);
+    border: scale(1) solid;
+    border-block-color: var(--primary-8);
+    border-inline-color: transparent;
+    border-radius: scale(2);
+  }
+}
+
+.spin-anim {
+  animation: spin-anim 2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,0 +1,25 @@
+$white: #fff;
+$black: #000;
+
+$primary-8: #008e9a;
+$primary-10: #114347;
+
+$secondary-8: #667085;
+
+:root {
+  @include generate-palette(#008e9a); // Generates --primary-*
+  @include generate-palette(
+    #667085,
+    'secondary-color'
+  ); // Generates --secondary-color-*
+
+  @include generate-layouts-overlay(
+    #000000,
+    'black'
+  ); // Generate --black-overlay-*
+
+  @include generate-layouts-overlay(
+    #ffffff,
+    'white'
+  ); // Generate --white-overlay-*
+}

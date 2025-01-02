@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [

@@ -1,0 +1,23 @@
+{
+    "Sign up for Saafe": "Saafe இல் பதிவு செய்க",
+    "Enter the OTP we have sent to": "நாங்கள் அனுப்பிய OTP ஐ உள்ளிடவும்",
+    "Resend code in": "குறியீட்டை மீண்டும் அனுப்ப",
+    "Resend code": "குறியீட்டை மீண்டும் அனுப்பு",
+    "I agree to the Terms & Conditions and Privacy Policy": "விதிமுறைகள் & நிபந்தனைகள் மற்றும் தனியுரிமைக் கொள்கையை நான் ஒப்புக்கொள்கிறேன்",
+    "Submit": "சமர்ப்பிக்கவும்",
+    "Please enter your phone number!": "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்!",
+    "Request OTP": "OTP ஐக் கோருக",
+    "Invalid Phone Number": "செல்லாத தொலைபேசி எண்",
+    "An OTP has been sent to your phone number": "உங்கள் தொலைபேசி எண்ணுக்கு OTP அனுப்பப்பட்டுள்ளது",
+    "Invalid OTP": "செல்லாத OTP",
+    "OTP Verified": "OTP சரிபார்க்கப்பட்டது",
+    "Phone number is required": "தொலைபேசி எண் அவசியம்",
+    "Share your financial information safely": "உங்கள் நிதி தகவல்களைப் பாதுகாப்பாகப் பகிரவும்",
+    "Log in/Sign Up": "உள்நுழைவு / பதிவு செய்தல்",
+    "Enter the OTP sent to your mobile.": "உங்கள் கைபேசிக்கு அனுப்பப்பட்ட OTP ஐ உள்ளிடவும்.",
+    "Select accounts to share": "பகிர்வதற்கு கணக்குகளைத் தேர்ந்தெடுக்கவும்.",
+    "Choose the accounts you'd like to share.": "நீங்கள் பகிர விரும்பும் கணக்குகளைத் தேர்ந்தெடுக்கவும்.",
+    "Review Consent": "ஒப்புதலை மதிப்பாய்வு செய்யவும்.",
+    "Approve or reject after reviewing the details": "விவரங்களை மதிப்பாய்வு செய்த பிறகு அங்கீகரிக்கவும் அல்லது நிராகரிக்கவும்.",
+    "Phone Number": "தொலைபேசி எண்"
+}

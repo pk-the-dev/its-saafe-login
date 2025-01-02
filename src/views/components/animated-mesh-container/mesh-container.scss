@@ -1,0 +1,117 @@
+.animate-container {
+  height: 100%;
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to bottom right,
+    var(--primary-9),
+    var(--primary-8),
+    var(--primary-6)
+  );
+
+  .children-container { 
+    position: relative; 
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .blob {
+    background: var(--primary-6);
+    height: 88%;
+    width: 63%;
+    position: absolute;
+    left: 20%;
+    top: 70%;
+
+    border-radius: 100%;
+    filter: blur(50px);
+    opacity: 0.8;
+    animation: blob-2 21s infinite ease-in;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    height: 50%;
+    width: 70%;
+    transform-origin: 60%;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--primary-9),
+      var(--primary-8)
+    );
+    border-radius: 100%;
+    filter: blur(50px) brightness(1);
+    opacity: 0.8;
+    animation: blob 15s infinite cubic-bezier(0.6, -0.2, 0.735, 0.045);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 60%;
+    height: 20%;
+    width: 40%;
+    transform-origin: 60%;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--primary-8),
+      var(--primary-7)
+    );
+    border-radius: 9999px;
+    filter: blur(50px) brightness(2.5);
+    opacity: 0.8;
+    animation: blob-2 18s infinite cubic-bezier(0.215, 0.61, 0.335, 1) reverse;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(-500px, -300px) rotate(90deg);
+  }
+
+  15% {
+    transform: translate(0px, 0px) rotate(94deg);
+  }
+
+  50% {
+    transform: translate(calc(100% - 100px), 200px) rotate(96deg);
+  }
+
+  85% {
+    transform: translate(0px, 0px) rotate(82deg);
+  }
+
+  100% {
+    transform: translate(-500px, -300px) rotate(90deg);
+  }
+}
+
+@keyframes blob-2 {
+  0% {
+    transform: translate(-500px, -300px) rotate(90deg);
+  }
+
+  15% {
+    transform: translate(0px, 0px) rotate(94deg);
+  }
+
+  50% {
+    transform: translate(calc(100% - 100px)) rotate(96deg);
+  }
+
+  85% {
+    transform: translate(0px, 0px) rotate(82deg);
+  }
+
+  100% {
+    transform: translate(-500px, -300px) rotate(90deg);
+  }
+}

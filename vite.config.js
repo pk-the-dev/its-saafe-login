@@ -17,7 +17,7 @@ export default defineConfig({
       ],
     }),
   ],
-  base: '/its-safe-login/',
+  base: '/its-safe-login',
   resolve: {
     alias: {
       '@src': path.resolve(__dirname, './src'),
@@ -40,4 +40,11 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name]-saafe-[hash].js`, // JS files
+      },
+    },
+  }
 })

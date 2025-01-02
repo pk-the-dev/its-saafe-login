@@ -2,6 +2,7 @@
   "name": "Saafe",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://pk2011.github.io/its-saafe-login/",
   "type": "module",
   "engines": {
     "node": ">=20"
